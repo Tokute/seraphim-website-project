@@ -5,40 +5,113 @@
 		<!-- 
 		Full Name: Basilio, Ned Markus S.
 		Section: CS-201
-		Activity: PRLM Chapter 4
-		Date: 07/29/2026 (mm/dd/yy) 
+		Activity: PRLM Chapter 8
+		Date: 08/20/2026 (mm/dd/yy) 
 		-->
 		<title>[Elsword] Seraphim Guild Website</title>
 		<link rel="stylesheet" href="styles.css" type="text/css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Sekuya&display=swap" rel="stylesheet">
+
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+		<link rel="shortcut-icon" type="image/png" href="img/favicon-32.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="img/favicon.png">
+		<link rel="icon" sizes="192x192" href="img/favicon.png?v=2">
+		<!-- Shortcut icon remains the for all icons for some reason -->
+
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 
 	<body>
 		<div id="container">
-			<header>
-				<a href="index.html">
-					<img src="img/seraphim-logo.png" alt="seraphim-logo"> <!-- height="256" width="384"-->
-				</a>
-			</header>
+			<div class="header-container">
+				<header>
+					<a href="index.html">
+						<img src="img/seraphim-logo.png" alt="seraphim-logo"> <!-- height="256" width="384"-->
+					</a>
+				</header>
 
-			<nav>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About Us</a></li>
-					<li><a href="guild-news.html">Guild News</a></li>
-					<li><a href="recruit-page.html">Join Now!</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
-				</ul>
-			</nav>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="guild-news.html">Guild News</a></li>
+						<li><a href="recruit-page.html">Join Now!</a></li>
+						<li><a href="contact.html">Contact Us</a></li>
+					</ul>
+				</nav>
+			</div>
 
-			<div id="hero">
+			<div id="hero" class="tablet-desktop">
 				<!-- Hero Image -->
 				<img src="img/hero-image.png" alt="seraphim-logo with elsword characters">
 			</div>
 
 			<main>
-				<div id="intro">
-					<h2>Welcome to the Seraphim Guild of Elsword!</h2>
+				<section id="mobile-intro" class="mobile mobile-container">
+					<h1>Welcome to the Seraphim Guild</h1>
+					<p>
+						Active on NA and International servers, founded by <strong>_Xzenith5</strong>. We provide reliable assistance and raids.
+					</p>
+					<p>
+						<strong>Mission:</strong> Support new players through Elsword's endgame.<br>
+						<strong>Vision:</strong> Lead in raid mastery and content domination.
+					</p>
+					<a href="recruit-page.html" class="mobile-link">Join us now!</a>
+				</section>
+
+				<section id="mobile-index-content" class="mobile mobile-container">
+					<h2>Why Join Seraphim</h2>
+					<dl>
+						<dt>Guild Storage</dt>
+						<dd>Shared storage space for items and resources.</dd>
+						<dt>Guild Skills</dt>
+						<dd><strong>Constantly maintained high-level buffs</strong> for maximum support.</dd>
+						<dt>Member Support</dt>
+						<dd>A helpful community for raids, builds, and questions.</dd>
+						<dt>Guild Farm Notifications</dt>
+						<dd>Discord bot integration to track your garden crops.</dd>
+					</dl>
+				</section>
+
+				<section id="mobile-guild-details" class="mobile generic-container">
+					<div class="guild-stats-mobile">
+						<h3>Skill Tree (All Unlocked)</h3>
+						<img src="img/skill-tree.png" alt="Skill Tree Unlocked">
+					</div>
+
+					<div class="guild-stats-mobile">
+						<h3>Guild Quests</h3>
+						<img src="img/guild-quests.png" alt="Guild Quests">
+					</div>
+
+					<div class="guild-stats-mobile">
+						<h3>Guild Farm Plots</h3>
+						<img src="img/farm-plot.jpg" alt="Farm slots available">
+					</div>
+				</section>
+
+				<section class="mobile grid-mobile generic-container">
+					<figure class="frame">
+						<a href="about.html"><img src="img/admin.jpg"></a>
+						<figcaption class="pic-text">Guild Admins</figcaption>
+					</figure>
+
+					<figure class="frame">
+						<a href="guild-news.html"><img src="img/guild-news-img.jpg"></a>
+						<figcaption class="pic-text">Guild News</figcaption>
+					</figure>
+
+					<figure class="frame">
+						<a href="recruit-page.html"><img src="img/admin.jpg"></a>
+						<figcaption class="pic-text">Join the Guild</figcaption>
+					</figure>
+				</section>
+
+				<section id="intro" class="tablet-desktop generic-container">
+					<h1>Welcome to the Seraphim Guild of Elsword!</h1>
 					<p>
 						The Seraphim Guild is a guild active on both North America and International servers and provides reliable assistance and raids to its guild members. Seraphim was founded by our glorious leader <strong>_Xzenith5</strong>.
 					</p>
@@ -47,23 +120,57 @@
 						Seraphim’s vision is to be the first guild that comes into mind when it comes to raid mastery, high combat power, and domination over Elsword’s content.
 					</p>
 					<p>
-						If you are interested in getting stronger or helping people get stronger with you, <a href="recruit-form.html">join us now!</a>
+						If you are interested in getting stronger or helping people get stronger with you, <a href="recruit-page.html">join us now!</a>
 					</p>
-				</div>
+				</section>
 
-				<div class="index-content">
-				<h3>Why Joining Seraphim will help you in Elsword</h3>
-				<dl>
-					<dt>Guild Storage</dt>
-					<dd>Guild Storage is a feature that allows guild members to store items in a shared storage space. This can be useful for sharing items with other members, or for storing items that you don't need right away.</dd>
-					<dt>Guild Skills</dt>
-					<dd>Guild Skills are special abilities that can be unlocked by the guild as a whole. These skills can provide benefits to all guild members, such as increased damage or reduced cooldowns. <strong>Seraphim constantly maintains high skill levels to ensure our members have the best possible support.</strong></dd>
-					<dt>Support from Fellow Guild Members</dt>
-					<dd>Here in Seraphim, we promote and uphold camaraderie among our members, ensuring that everyone feels supported and valued. When it comes to raids, suggestions, build ideas, or questions, you'll always have a supportive community to turn to.</dd>
-					<dt>Guild Farm Notification System</dt>
-					<dd>Our guild integrates a notification system to remind members about the crops that they have planted in the guild garden. This is made possible through discord bots by logging in the crop you planted.</dd>
-				</dl>
-			</div>
+				<section id="index-content" class="tablet-desktop generic-container">
+					<h3>Why Joining Seraphim will help you in Elsword</h3>
+					<dl>
+						<dt>Guild Storage</dt>
+						<dd>Guild Storage is a feature that allows guild members to store items in a shared storage space. This can be useful for sharing items with other members, or for storing items that you don't need right away.</dd>
+						<dt>Guild Skills</dt>
+						<dd>Guild Skills are special abilities that can be unlocked by the guild as a whole. These skills can provide benefits to all guild members, such as increased damage or reduced cooldowns. <strong>Seraphim constantly maintains high skill levels to ensure our members have the best possible support.</strong></dd>
+						<dt>Support from Fellow Guild Members</dt>
+						<dd>Here in Seraphim, we promote and uphold camaraderie among our members, ensuring that everyone feels supported and valued. When it comes to raids, suggestions, build ideas, or questions, you'll always have a supportive community to turn to.</dd>
+						<dt>Guild Farm Notification System</dt>
+						<dd>Our guild integrates a notification system to remind members about the crops that they have planted in the guild garden. This is made possible through discord bots by logging in the crop you planted.</dd>
+					</dl>
+				</section>
+
+				<section id="guild-details" class="tablet-desktop generic-container">
+					<div class="guild-stats">
+						<h3>Skill Tree (All Unlocked)</h3>
+						<img src="img/skill-tree.png" alt="Skill Tree Unlocked">
+					</div>
+
+					<div class="guild-stats">
+						<h3>Guild Quests</h3>
+						<img src="img/guild-quests.png" alt="Guild Quests">
+					</div>
+
+					<div class="guild-stats">
+						<h3>Guild Farm Plots</h3>
+						<img src="img/farm-plot.jpg" alt="Farm slots available">
+					</div>
+				</section>
+
+				<section class="grid generic-container tablet-desktop">
+					<figure class="frame">
+						<a href="about.html"><img src="img/admin.jpg"></a>
+						<figcaption class="pic-text">Guild Admins</figcaption>
+					</figure>
+
+					<figure class="frame">
+						<a href="guild-news.html"><img src="img/guild-news-img.jpg"></a>
+						<figcaption class="pic-text">Guild News</figcaption>
+					</figure>
+
+					<figure class="frame">
+						<a href="recruit-page.html"><img src="img/admin.jpg"></a>
+						<figcaption class="pic-text">Join the Guild</figcaption>
+					</figure>
+				</section>
 
 			</main>
 		</div>

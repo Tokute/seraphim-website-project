@@ -1,0 +1,14 @@
+Video Notes:
+add
+table {width: 80%} in width>1921px in media
+
+Hex code:
+Gold: #C8A563
+Link: #9900ff
+Footer: #5a3895
+single-character white: #F9FAFD
+Deep Purple: #5a3895
+Purple: #9900ff
+
+Dark Cyan: #216C85
+Darker Cyan: #243338

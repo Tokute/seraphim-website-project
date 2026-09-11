@@ -5,40 +5,107 @@
 		<!-- 
 		Full Name: Basilio, Ned Markus S.
 		Section: CS-201
-		Activity: PRLM Chapter 4
-		Date: 07/29/2026 (mm/dd/yy) 
+		Activity: PRLM Chapter 8
+		Date: 08/20/2026 (mm/dd/yy) 
 		-->
 		<title>[Elsword] Seraphim Guild Website</title>
 		<link rel="stylesheet" href="styles.css" type="text/css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Sekuya&display=swap" rel="stylesheet">
+		
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+		<link rel="shortcut-icon" type="image/png" href="img/favicon-32.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="img/favicon.png">
+		<link rel="icon" sizes="192x192" href="img/favicon.png?v=2">
+		<!-- Shortcut icon remains the for all icons for some reason -->
 	</head>
 
 	<body>
 		<div id="container">
-			<header>
+			<div class="header-container">
+				<header>
+					<a href="index.html">
+						<img src="img/seraphim-logo.png" alt="seraphim-logo"> <!-- height="256" width="384"-->
+					</a>
+				</header>
 
-				<a href="index.html">
-					<img src="img/seraphim-logo.png" alt="seraphim-logo"> <!-- height="256" width="384"-->
-				</a>
-			</header>
-			
-			<nav>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About Us</a></li>
-					<li><a href="guild-news.html">Guild News</a></li>
-					<li><a href="recruit-page.html">Join Now!</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
-				</ul>
-			</nav>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="guild-news.html">Guild News</a></li>
+						<li><a href="recruit-page.html">Join Now!</a></li>
+						<li><a href="contact.html">Contact Us</a></li>
+					</ul>
+				</nav>
+			</div>
 
-			<div id="hero">
+			<div id="hero" class="tablet-desktop">
 				<!-- Hero Image -->
 				<img src="img/hero-image.png" alt="seraphim-logo with elsword characters">
 			</div>
 			
 			<main>
-				<div id="seraphims">
+
+				<div id="seraphims-mobile" class="mobile">
+					<h1>The Seraphims (Founding Duo)</h1>
+
+					<div class="single-character">
+						<h2>The Guild Leader</h2>
+						<img src="img/xzenith.png" alt="xzenith-main">
+						<p><strong>_Xzenith5</strong> (Guild Master)</p>
+					</div>
+
+					<div class="single-character">
+						<h2>Co-Leader</h2>
+						<img src="img/vespera.png" alt="vespera-main">
+						<p><strong>Vespera_5ive</strong> (Co-leader)</p>
+					</div>
+
+				</div>
+
+                <div id="ophanims-mobile" class="mobile">
+                    <h1>Ophanims <small>(Most Valuable Players)</small></h1>
+                    
+					<div class="single-character">
+						<h2>Raid Lead & Tank</h2>
+						<img src="img/kael-thaw.png" alt="kael-thaw-main">
+						<p><strong>Kael_Thaw</strong> (Raid Leader / Main Tank)</p>
+					</div>
+
+					<div class="single-character">
+						<h2>The Mastermind</h2>
+						<img src="img/pixie.png" alt="pixie-main">
+						<p><strong>PixiePounder</strong> (Buffer)</p>
+					</div>
+
+					<div class="single-character">
+						<h2>Support Overseer</h2>
+						<img src="img/gloom.png" alt="gloom-main">
+						<p><strong>GloomGazer</strong> (Heal/Support)</p>
+					</div>
+
+					<div class="single-character">
+						<h2>PvP Warlord</h2>
+						<img src="img/frostbyte.png" alt="frostbyte-main">
+						<p><strong>FrostByte_TV</strong> (PvP Main)</p>
+					</div>
+                    
+                </div>
+
+				<div id="about-content-mobile" class="mobile mobile-container">
+					<p>Each high-ranking official of Seraphim plays a crucial role in maintaining the guild's success and fostering a strong community of players. As such, they must be respected and held in high regard. Likewise, any misconduct by guild members will not be tolerated.</p>
+
+					<p>Our guild's ultimate goal is to support our guild members while keeping Elsword a fun and engaging game for everyone. This is made possible through the management and leadership of our dedicated officials. Moreover, we strive to create a positive and inclusive environment where all members can thrive and enjoy the game together.</p>
+
+					<p>If you are interested in joining this guild, <a href="recruit-form.html" class="mobile-link">Click Here</a></p>
+				</div>
+
+				<div id="seraphims" class="tablet-desktop">
 					<h1>The Seraphims (Founding Duo)</h1>
 
 					<div class="single-character">
@@ -55,7 +122,7 @@
 
 				</div>
 
-                <div id="ophanims">
+                <div id="ophanims" class="tablet-desktop">
                     <h1>Ophanims <small>(Most Valuable Players)</small></h1>
                     
 					<div class="single-character">
@@ -84,7 +151,7 @@
                     
                 </div>
 
-				<div class="about-content">
+				<div id="about-content" class="tablet-desktop">
 					<p>Each high-ranking official of Seraphim plays a crucial role in maintaining the guild's success and fostering a strong community of players. As such, they must be respected and held in high regard. Likewise, any misconduct by guild members will not be tolerated.</p>
 
 					<p>Our guild's ultimate goal is to support our guild members while keeping Elsword a fun and engaging game for everyone. This is made possible through the management and leadership of our dedicated officials. Moreover, we strive to create a positive and inclusive environment where all members can thrive and enjoy the game together.</p>

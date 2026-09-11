@@ -5,65 +5,337 @@
 		<!-- 
 		Full Name: Basilio, Ned Markus S.
 		Section: CS-201
-		Activity: PRLM Chapter 4
-		Date: 07/29/2026 (mm/dd/yy) 
+		Activity: PRLM Chapter 8
+		Date: 08/20/2026 (mm/dd/yy) 
 		-->
 		<title>[Elsword] Seraphim Guild Website</title>
 		<link rel="stylesheet" href="styles.css" type="text/css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Sekuya&display=swap" rel="stylesheet">
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+		<link rel="shortcut-icon" type="image/png" href="img/favicon-32.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="img/favicon.png">
+		<link rel="icon" sizes="192x192" href="img/favicon.png?v=2">
+		<!-- Shortcut icon remains the for all icons for some reason -->
 	</head>
 
 	<body>
 		<div id="container">
-			<header>
-	
-				<a href="index.html">
-					<img src="img/seraphim-logo.png" alt="seraphim-logo"> <!-- height="256" width="384"-->
-				</a>
-			</header>
-			
-			<nav>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About Us</a></li>
-					<li><a href="guild-news.html">Guild News</a></li>
-					<li><a href="recruit-page.html">Join Now!</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
-				</ul>
-			</nav>
+			<div class="header-container">
+				<header>
+					<a href="index.html">
+						<img src="img/seraphim-logo.png" alt="seraphim-logo"> <!-- height="256" width="384"-->
+					</a>
+				</header>
 
-			<div id="hero">
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="guild-news.html">Guild News</a></li>
+						<li><a href="recruit-page.html">Join Now!</a></li>
+						<li><a href="contact.html">Contact Us</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<div id="hero" class="tablet-desktop">
 				<!-- Hero Image -->
 				<img src="img/hero-image.png" alt="seraphim-logo with elsword characters">
 			</div>
 			
 			<main>
-				<div id="guild-news-intro">
-					<p class="highlight">In this section you will find the latest news and updates from the Seraphim Guild.</p>
+				<p class="highlight">In this section you will find the latest news and updates from the Seraphim Guild.</p>
 
-					<div class="news-section">
+				<!-- This will appear both in mobile and tablet/desktop. Styling for mobile will be applied.-->
+				<article id="important-news" class="generic-container"> 
+					<h2>IMPORANT NEWS</h2>
+					<div class="line"></div>
+					<h3>New Raid Session Calendar</h3>
+					<p>*Slots will be adjusted as necessary to accomodate players depending on the availability of angels.</p>
+					<p>Guild Members may form their own raid party in the discord server.</p>
+
+					<div id="mobile-schedule" class="mobile">
+						<ul>
+							<li class="first-item"><span class="bold">[Rigomor] Titan's Grotto</span></li>
+							<li><span class="bold">Host: </span>Kael_Thaw, Scizke, aleph_001</li>
+							<li><span class="bold">Scheduled Time: </span>Monday-Saturday, 4:00 PM - 4:30 PM</li>
+							<li><span class="bold">Max Slots: </span>15</li>
+						</ul>
+
+						<ul>
+							<li class="first-item"><span class="bold">[Pruinaum] Savage White-Ghost's Castle, Altar of Invocation</span></li>
+							<li><span class="bold">Host: </span>Ophanims</li>
+							<li><span class="bold">Scheduled Time: </span>Monday-Saturday, 4:45 PM - 5:25 PM</li>
+							<li><span class="bold">Max Slots: </span>20</li>
+						</ul>
+
+						<ul>
+							<li class="first-item"><span class="bold">[Pruinaum Outskirts] All Raids Run</span></li>
+							<li><span class="bold">Host: </span>Cherubims</li>
+							<li><span class="bold">Scheduled Time: </span>Monday-Saturday, 5:50 PM - 6:50 PM</li>
+							<li><span class="bold">Max Slots: </span>20</li>
+						</ul>
+
+						<ul>
+							<li class="first-item"><span class="bold">[Atma'Ram][NEW!] Spirit Lord's Temple</span></li>
+							<li><span class="bold">Host: </span>Seraphims, Ophanims</li>
+							<li><span class="bold">Scheduled Time: </span>Monday-Saturday, 7:20 PM - 8:00 PM</li>
+							<li><span class="bold">Max Slots: </span>30</li>
+						</ul>
+					</div>
+
+					<div class="tablet-desktop">
+						<table>
+
+							<tr>
+								<th>Dungeon</th>
+								<th>Host</th>
+								<th>Scheduled Time</th>
+								<th>Max Slots</th>
+							</tr>
+
+							<tr>
+								<td class="rigomor">[Rigomor] Titan's Grotto</td>
+								<td>Kael_Thaw, Scizke, aleph_001</td>
+								<td>Monday-Saturday<br>4:00 PM - 4:30 PM</td>
+								<td>15</td>
+							</tr>
+
+							<tr class="stripe">
+								<td class="pruinaum">[Pruinaum] Savage White-Ghost's Castle, Altar of Invocation</td>
+								<td>Ophanims</td>
+								<td>Monday-Saturday<br>4:45 PM - 5:25 PM</td>
+								<td>20</td>
+							</tr>
+
+							<tr>
+								<td class="pruinaum-outskirt">[Pruinaum Outskirts] All Raids Run</td>
+								<td>Cherubims</td>
+								<td>Monday-Saturday<br>5:50 PM - 6:50 PM</td>
+								<td>20</td>
+							</tr>
+
+							<tr class="stripe">
+								<td class="atma-ram">[Atma'Ram][NEW!] Spirit Lord's Temple</td>
+								<td>Seraphims, Ophanims</td>
+								<td>Monday-Saturday<br>7:20 PM - 8:00 PM</td>
+								<td>30</td>
+							</tr>
+
+						</table>
+					</div>
+					
+						<h3>Complete the form below to apply for a slot</h3>
+
+						<form id="schedule-form" class="grid">
+						
+							<fieldset>
+								<legend>Player Information</legend>
+								<label for="username-elsword" id="username-label">Elsword Username
+									<input required id="username-elsword" type="text" placeholder="Elsword Username">
+								</label>
+
+								<label for="username-discord" id="discord-username-label">Discord Username
+									<input required id="username-discord" type="text" placeholder="Discord Username">
+								</label>
+
+								<label for="email" id="email-label">Email
+									<input required id="email" type="text" placeholder="Your Email">
+								</label>
+
+								<label for="character" id="character-label">Select Character: </small>
+									<select required name="select-character" id="character">
+										<option value="select-fav-character">(Select Character)</option>
+										<option value="elsword">Elsword</option>
+										<option value="aisha">Aisha</option>
+										<option value="rena">Rena</option>
+										<option value="raven">Raven</option>
+										<option value="eve">Eve</option>
+										<option value="elesis">Elesis</option>
+										<option value="chung">Chung</option>
+										<option value="ara">Ara</option>
+										<option value="add">Add</option>
+										<option value="luciel">Luciel</option>
+										<option value="ain">Ain</option>
+										<option value="rose">Rose</option>
+										<option value="laby">Laby</option>
+										<option value="noah">Noah</option>
+									</select>
+								</label>
+
+								<label for="1st-path" class="radioboxes">
+									<input required type="radio" id="1st-path" name="character-path" value="1st-path">
+									1st Path
+								</label>
+
+								<label for="character-path" class="radioboxes">
+									<input required type="radio" id="2nd-path" name="character-path" value="2nd-path">
+									2nd Path
+								</label>
+
+								<label for="character-path" class="radioboxes">
+									<input required type="radio" id="3rd-path" name="character-path" value="3rd-path">
+									3rd Path
+								</label>
+
+								<label for="character-path" class="radioboxes">
+									<input required type="radio" id="4th-path" name="character-path" value="4th-path">
+									4th Path
+								</label>
+
+								<p>Select Role:</p>
+
+								<label for="role" class="radioboxes">
+									<input required type="radio" id="dps" name="role" value="dps">
+									Damage Dealer (DPS)
+								</label>
+
+								<label for="role" class="radioboxes">
+									<input required type="radio" id="sub-dps" name="role" value="sub-dps">
+									Substitute Damage Dealer (Sub-DPS)
+								</label>
+
+								<label for="role" class="radioboxes">
+									<input required type="radio" id="support" name="role" value="support">
+									Buffer (Support)
+								</label>
+
+								<label for="role" class="radioboxes">
+									<input required type="radio" id="healer" name="role" value="healer">
+									Healer (Support)
+								</label>
+
+							</fieldset>
+
+							<fieldset>
+								<legend>Raid and Schedule</legend>
+
+								<p>Select Raid:</p>
+
+								<label for="rigomor" class="radioboxes">
+									<input required type="radio" id="rigomor" name="select-raid" value="rigomor">
+									Rigomor
+								</label>
+
+								<label for="pruinaum" class="radioboxes">
+									<input required type="radio" id="pruinaum" name="select-raid" value="pruinaum">
+									Pruinaum
+								</label>
+
+								<label for="pruinaum-outskirts" class="radioboxes">
+									<input required type="radio" id="pruinaum-outskirts" name="select-raid" value="pruinaum-outskirts">
+									Pruinaum Outskirts
+								</label>
+
+								<label for="atmaram" class="radioboxes">
+									<input required type="radio" id="atmaram" name="select-raid" value="atmaram">
+									Atma'Ram
+								</label>
+
+								<p style="margin-top: 1em;">Select Days:</p>
+
+								<label for="monday" class="radioboxes">
+									<input required type="checkbox" id="monday" name="select-days" value="monday">
+									Monday
+								</label>
+
+								<label for="tuesday" class="radioboxes">
+									<input required type="checkbox" id="tuesday" name="select-days" value="tuesday">
+									Tuesday
+								</label>
+
+								<label for="wednesday" class="radioboxes">
+									<input required type="checkbox" id="wednesday" name="select-days" value="wednesday">
+									Wednesday
+								</label>
+
+								<label for="thursday" class="radioboxes">
+									<input required type="checkbox" id="thursday" name="select-days" value="thursday">
+									Thursday
+								</label>
+
+								<label for="friday" class="radioboxes">
+									<input required type="checkbox" id="friday" name="select-days" value="friday">
+									Friday
+								</label>
+
+								<label for="saturday" class="radioboxes">
+									<input required type="checkbox" id="saturday" name="select-days" value="saturday">
+									Saturday
+								</label>
+
+							</fieldset>
+
+							<fieldset>
+								<legend>Raid Experience</legend>
+
+								<p>Experience Level:</p>
+
+								<label for="exp-beginner" class="radioboxes">
+									<input required type="radio" id="exp-beginner" name="experience" value="beginner">
+									Beginner / Learning Mechanics
+								</label>
+
+								<label for="exp-intermediate" class="radioboxes">
+									<input required type="radio" id="exp-intermediate" name="experience" value="intermediate">
+									Intermediate / Know Mechanics
+								</label>
+
+								<label for="exp-veteran" class="radioboxes">
+									<input required type="radio" id="exp-veteran" name="experience" value="veteran">
+									Veteran / Raid Leader
+								</label>
+
+								<p>Communication:</p>
+
+								<label for="mic-status" class="radioboxes">
+									<input type="checkbox" id="mic-status" name="has_mic" value="yes">
+									I have a working microphone for Discord voice comms
+								</label>
+
+								<label for="additional-notes" id="notes-label">Additional Notes / Comments:
+									<textarea id="additional-notes" name="notes" rows="4" placeholder="Any extra info or gear stats..."></textarea>
+								</label>
+							</fieldset>
+
+							<input type="submit" value="Submit Raid Application">
+
+						</form>
+
+				</article>
+
+				
+
+				<div id="guild-news-intro">
+
+					<article class="news-section">
 						<h3 class="news-title">[NA/INT] _Xzenith5’s Announcement to New Guild Members!</h3>
 						<p class="news-content">Today marks another milestone for the Seraphim Guild. Now that we… <span class="small-text">Open for more info</span></p>
 						<p class="news-date">Posted on: October, 15, 2025</p>
-					</div>
+					</article>
 
-					<div class="news-section">
+					<article class="news-section">
 						<h3 class="news-title">[NA/INT] Seraphim Guild’s New Raid Schedule!</h3>
 						<p class="news-content">The Seraphim Guild is proud to announce our new raid schedule for the upcoming month. We will be hosting raids every… <span class="small-text">Open for more info</span></p>
 						<p class="news-date">Posted on: October, 10, 2025</p>
-					</div>
+					</article>
 
-					<div class="news-section">
+					<article class="news-section">
 						<h3 class="news-title">[NA] Seraphim Guild Challenged by WhiteSpaceHologram Guild</h3>
 						<p class="news-content">The Seraphim Guild has been receiving hostile treatment by the WSH (WhiteSpaceHologram) Guild for... <span class="small-text">Open for more info</span></p>
 						<p class="news-date">Posted on: October, 9, 2025</p>
-					</div>
+					</article>
 
-					<div class="news-section">
+					<article class="news-section">
 						<h3 class="news-title">[NA/INT] Seraphim Guild Mission: Dominate Current Raid</h3>
 						<p class="news-content">Multiple guilds have been seen farming this specific raid due to a hidden stat mechanic... <span class="small-text">Open for more info</span></p>
 						<p class="news-date">Posted on: October, 4, 2025</p>
-					</div>
+					</article>
 
 				</div>
 			</main>

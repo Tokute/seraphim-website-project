@@ -5,43 +5,99 @@
 		<!-- 
 		Full Name: Basilio, Ned Markus S.
 		Section: CS-201
-		Activity: PRLM Chapter 4
-		Date: 07/29/2026 (mm/dd/yy) 
+		Activity: PRLM Chapter 8
+		Date: 08/20/2026 (mm/dd/yy) 
 		-->
 		<title>[Elsword] Seraphim Guild Website</title>
 		<link rel="stylesheet" href="styles.css" type="text/css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Sekuya&display=swap" rel="stylesheet">	
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+		<link rel="shortcut-icon" type="image/png" href="img/favicon-32.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="img/favicon.png">
+		<link rel="icon" sizes="192x192" href="img/favicon.png?v=2">
+		<!-- Shortcut icon remains the for all icons for some reason -->
 	</head>
 
 	<body>
 		<div id="container">
-			<header>
-				<a href="index.html">
-					<img src="img/seraphim-logo.png" alt="seraphim-logo"> <!-- height="256" width="384"-->
-				</a>
-			</header>
+			<div class="header-container">
+				<header>
+					<a href="index.html">
+						<img src="img/seraphim-logo.png" alt="seraphim-logo"> <!-- height="256" width="384"-->
+					</a>
+				</header>
 
-			<nav>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About Us</a></li>
-					<li><a href="guild-news.html">Guild News</a></li>
-					<li><a href="recruit-page.html">Join Now!</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
-				</ul>
-			</nav>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="guild-news.html">Guild News</a></li>
+						<li><a href="recruit-page.html">Join Now!</a></li>
+						<li><a href="contact.html">Contact Us</a></li>
+					</ul>
+				</nav>
+			</div>
 
-			<div id="hero">
+			<div id="hero" class="tablet-desktop">
 				<!-- Hero Image -->
 				<img src="img/hero-image.png" alt="seraphim-logo with elsword characters">
 			</div>
 			
 			<main>
-				<div id="recruit-content">
-					<h2>Requirements for Joining the Seraphim Guild</h2>
-					<p>*<span class="highlight small-text">Before continuing with the application process, please ensure you meet the following requirements:</span></p>
+				<h2>Requirements for Joining the Seraphim Guild</h2>
+				<p>*<span class="highlight small-text">Before continuing with the application process, please ensure you meet the following requirements:</span></p>
+				<div id="recruit-content-mobile" class="grid-mobile mobile">
+					<div class="main-requirements-mobile mobile-container">
 
-					<div class="main-requirements">
+						<article id="primary-requirements-mobile">
+							<h3>Primary Requirements</h3>
+							<ul>
+								<li>Max Level Character: Level 99</li>
+								<li>Completed Professor Pho’s Guide until Varinimyr</li>
+								<li>Obtained Varinimyr Raid Weapon</li>
+								<li>Discord Account (For Guild Communication)</li>
+								<li>Combat Power > 1.5 Million, Defense > 250k</li>
+							</ul>
+						</article>
+						
+						<article id="prioritized-characters-mobile" class="mobile">
+							<h3>Highly Prioritized Characters:</h3>
+							<ul>
+								<li>Elsword: Genesis (PVP)</li>
+								<li>Raven: Rage Hearts (PVP)</li>
+								<li>Eve: Code: Sariel (PVE, DPS)</li>
+								<li>Elesis: Empire Sword (PVE, Sub-DPS)</li>
+								<li>Chung: Dius Aer (PVE, Healer)</li>
+								<li>Ara: Surya (PVE, Healer)</li>
+								<li>Noah: Celestia (PVE, Buffer)</li>
+							</ul>
+						</article>						
+					
+						<article id="guild-rules-mobile" class="mobile">
+							<h3>Guild Rules</h3>
+							<ol>
+								<li><span class="bold">Be Respectful and Courteous:</span> Treat all guild members with respect. Harassment, toxicity, hate speech, or drama in guild chat or Discord will not be tolerated.</li>
+								<li><span class="bold">Activity and Inactivity:</span> Members are expected to stay active. If you plan to be away from the game for an extended period (more than 2 weeks), please notify an officer or the guild leader to avoid being removed during routine cleanups.</li>
+								<li><span class="bold">Participation in Guild Features:</span> Try to contribute to guild growth by participating in guild daily/weekly requests, checking the guild farm/garden system regularly, and utilizing shared resources responsibly.</li>
+								<li><span class="bold">Raid and Endgame Etiquette:</span> When joining guild raid parties, communicate effectively, come prepared with proper gear/consumables, and be patient with newer members learning mechanics.</li>
+								<li><span class="bold">Guild Storage Etiquette:</span> Only take items from the Guild Storage if you genuinely need them. Do not empty the storage for personal profit, and consider donating back when you have spare resources.</li>
+								<li><span class="bold">Discord Presence:</span> Joining our Discord server is heavily encouraged (or required) for important announcements, raid coordination, and farm notification reminders.</li>
+							</ol>
+						</article>
+
+						<p>If you pass these requirements:<a href="recruit-form.html" class="mobile-link">Recruitment Form</a></p>
+
+					</div>
+				</div>
+
+				<div id="recruit-content" class="tablet-desktop main-requirements generic-container grid">
+					<article id="primary-requirements">
+						<h3>Primary Requirements</h3>
 						<ul>
 							<li>Max Level Character: Level 99</li>
 							<li>Completed Professor Pho’s Guide until Varinimyr</li>
@@ -49,10 +105,9 @@
 							<li>Discord Account (For Guild Communication)</li>
 							<li>Combat Power > 1.5 Million, Defense > 250k</li>
 						</ul>
-					</div>
+					</article>
 					
-
-					<div class="priority-characters">
+					<article id="prioritized-characters">
 						<h3>Highly Prioritized Characters:</h3>
 						<ul>
 							<li>Elsword: Genesis (PVP)</li>
@@ -63,10 +118,23 @@
 							<li>Ara: Surya (PVE, Healer)</li>
 							<li>Noah: Celestia (PVE, Buffer)</li>
 						</ul>
-					</div>
-					
+					</article>
 
-					<p>Proceed to the <a href="recruit-form.html"><span class="highlight">Recruitment Form</span></a> page to submit your application.</p>
+					<article id="guild-rules" class="tablet-desktop">
+						<h3>Guild Rules</h3>
+						<ol>
+							<li><span class="bold">Be Respectful and Courteous:</span> Treat all guild members with respect. Harassment, toxicity, hate speech, or drama in guild chat or Discord will not be tolerated.</li>
+							<li><span class="bold">Activity and Inactivity:</span> Members are expected to stay active. If you plan to be away from the game for an extended period (more than 2 weeks), please notify an officer or the guild leader to avoid being removed during routine cleanups.</li>
+							<li><span class="bold">Participation in Guild Features:</span> Try to contribute to guild growth by participating in guild daily/weekly requests, checking the guild farm/garden system regularly, and utilizing shared resources responsibly.</li>
+							<li><span class="bold">Raid and Endgame Etiquette:</span> When joining guild raid parties, communicate effectively, come prepared with proper gear/consumables, and be patient with newer members learning mechanics.</li>
+							<li><span class="bold">Guild Storage Etiquette:</span> Only take items from the Guild Storage if you genuinely need them. Do not empty the storage for personal profit, and consider donating back when you have spare resources.</li>
+							<li><span class="bold">Discord Presence:</span> Joining our Discord server is heavily encouraged (or required) for important announcements, raid coordination, and farm notification reminders.</li>
+						</ol>
+					</article>
+
+					<aside id="recruitment-form" class="grid-item4">
+						<p class="tablet-desktop">Proceed to the <a href="recruit-form.html"><span class="highlight">Recruitment Form</span></a> page to submit your application.</p>
+					</aside>
 				</div>
 			</main>
 			

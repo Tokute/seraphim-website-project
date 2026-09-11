@@ -5,44 +5,69 @@
 		<!-- 
 		Full Name: Basilio, Ned Markus S.
 		Section: CS-201
-		Activity: PRLM Chapter 4
-		Date: 07/29/2026 (mm/dd/yy) 
+		Activity: PRLM Chapter 8
+		Date: 08/20/2026 (mm/dd/yy) 
 		-->
 		<title>[Elsword] Seraphim Guild Website</title>
 		<link rel="stylesheet" href="styles.css" type="text/css">
 		<meta charset="utf-8">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Sekuya&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 
 	<body>
 		<div id="container">
-			<header>
-	
-				<a href="index.html">
-					<img src="img/seraphim-logo.png" alt="seraphim-logo"> <!-- height="256" width="384"-->
-				</a>
-			</header>
-			
-			<nav>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About Us</a></li>
-					<li><a href="guild-news.html">Guild News</a></li>
-					<li><a href="recruit-page.html">Join Now!</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
-				</ul>
-			</nav>
+			<div class="header-container">
+				<header>
+					<a href="index.html">
+						<img src="img/seraphim-logo.png" alt="seraphim-logo"> <!-- height="256" width="384"-->
+					</a>
+				</header>
 
-			<div id="hero">
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="guild-news.html">Guild News</a></li>
+						<li><a href="recruit-page.html">Join Now!</a></li>
+						<li><a href="contact.html">Contact Us</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<div id="hero" class="tablet-desktop">
 				<!-- Hero Image -->
 				<img src="img/hero-image.png" alt="seraphim-logo with elsword characters">
 			</div>
 			
 			<main>
-				<div id="contact">
-					<p><strong>Guild Master</strong>: For <span class="highlight">guild-related matters</span>, please reach out to the Guild Master, _Xzenith5, at <a href="mailto:zenith5@gmail.com">zenith5@gmail.com</a>.</p>
-                    <p><strong>Officer Team</strong>: If you need assistance from the officer team, please email <a href="mailto:seraphim.guild@gmail.com">seraphim.guild@gmail.com</a>.</p>
-                    <p><strong>Community</strong>: Join our official <a href="https://discord.com/invite/elsword" target="_blank">[Discord Server]</a> to connect with members and stay updated on events.</p>
-                    <p>If you are interested in sending gifts, you may mail them at <a href="https://maps.app.goo.gl/4drvTdCTBGrUyUsv5" target="_blank">Seraphim Guild Building 604 Baronne St, New Orleans, LA 70113, USA</a></p>
+				<div id="contact-mobile" class="mobile mobile-container">
+					<h3>Guild Master Email</h3>
+					<p><a href="mailto:zenith5@gmail.com" class="mobile-link">zenith5@gmail.com</a></p>
+                    <h3>Officer Team Email</h3>
+                    <p><a href="mailto:seraphim.guild@gmail.com" class="mobile-link">seraphim.guild@gmail.com</a></p>
+                    <h3>Community</h3>
+                    <p><a href="https://discord.com/invite/elsword" target="_blank" class="mobile-link">[Discord Server]</a></p>
+                    <h3>Address</h3>
+                    <p><a href="https://maps.app.goo.gl/4drvTdCTBGrUyUsv5" target="_blank" class="mobile-link">Seraphim Guild Building 604 Baronne St, New Orleans, LA 70113, USA</a></p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.069840603702!2d-90.07573692369752!3d29.94866967497199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8620a6750df01591%3A0x6572390953d56262!2s604%20Baronne%20St%2C%20New%20Orleans%2C%20LA%2070113%2C%20USA!5e0!3m2!1sen!2sph!4v1783950103498!5m2!1sen!2sph" width="600" height="450" allowfullscreen="" class="map"></iframe>
+				</div>
+
+				<div id="contact" class="tablet-desktop generic-container">
+					<h3>Guild Master</h3>
+					<p>For <span class="highlight">guild-related matters</span>, please reach out to the Guild Master, _Xzenith5, at</p>
+					<a href="mailto:zenith5@gmail.com" class="contact-link">zenith5@gmail.com</a>
+                    <h3>Officer Team</h3>
+                    <p>If you need assistance from the officer team, please email</p>
+					<a href="mailto:seraphim.guild@gmail.com" class="contact-link">seraphim.guild@gmail.com</a>
+                    <h3>Community</h3>
+                    <p>Join our official Discord Server to connect with members and stay updated on events</p>
+					<a href="https://discord.com/invite/elsword" target="_blank" class="contact-link">[Discord Server]</a>
+                    <h3>Address</h3>
+                    <p>If you are interested in sending gifts, you may mail them at</p>
+					<a href="https://maps.app.goo.gl/4drvTdCTBGrUyUsv5" target="_blank" class="contact-link">Seraphim Guild Building 604 Baronne St, New Orleans, LA 70113, USA</a>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.069840603702!2d-90.07573692369752!3d29.94866967497199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8620a6750df01591%3A0x6572390953d56262!2s604%20Baronne%20St%2C%20New%20Orleans%2C%20LA%2070113%2C%20USA!5e0!3m2!1sen!2sph!4v1783950103498!5m2!1sen!2sph" width="600" height="450" allowfullscreen="" class="map"></iframe>
 				</div>
 			</main>

@@ -1,7 +1,8 @@
 /*
     CSS For Seraphim Guild Website
     Author: Ned Basilio
-    Date: 07-29-2026 mm-dd-yyyy
+    Activity: PRLM Chapter 7
+    Date: 08-08-2026 mm-dd-yyyy
 
 */
 
@@ -9,13 +10,8 @@
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: "Open Sans";
-    src: url("fonts/OpenSans-Regular.ttf");
-}
-
 /* Reset Styles */
-body, header, nav, main, footer, h1, h2, h3, div, img, p, ul, li {
+body, header, nav, main, footer, h1, h2, h3, div, img, p, ul, li, figure, figcaption, section, article, aside {
     margin: 0;
     padding: 0;
     border: 0;
@@ -24,7 +20,6 @@ body, header, nav, main, footer, h1, h2, h3, div, img, p, ul, li {
 /* General Styles */
 body {
     background-color: #fff;
-    font-family: "Open Sans", sans-serif;
 }
 
 a {
@@ -36,22 +31,34 @@ a:visited {
     color: #9900ff;
 }
 
-header {
-    width: 20%;
-    display: inline-block;
-    vertical-align: middle;
+.frame {
+    position: relative;
+    max-width: 250px;
+    margin: 2% auto;
 }
 
-header a {
-    display: inline-block;
-}
-
-header a img {
-    display: block;
-    padding: 0.3em;
-    height: auto;
+.frame img {
+    max-height: 300px;
     width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
+
+.pic-text {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Styles for hero image */
 
 #hero img {
     width: 100%;
@@ -63,48 +70,43 @@ header a img {
     border-bottom: solid 2px #C8A563;
 }
 
+/* Styles for main */
+
 main {
     clear: left;
     background-color: #e6e6e6;
     padding: 2%;
-    font-size: 1.25em;
+    font-size: 1.15em;
+    font-family: "Roboto Slab", serif;
 }
-
-#intro p {
-    font-size: 1em;
-    text-align: left;
-    padding: 1em;
-}
-
 
 /* CSS styles for navigation bar */
+
 nav {
-    width: 70%;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0;
-    text-align: left;
+    padding: 1%;
 }
 
 nav ul {
     list-style-type: none;
-    margin: 0;
     padding: 0;
-    align-items: center;
+    text-align: center;
 }
 
 nav li {
+    text-align: center;
     text-transform: uppercase;
-    display: inline-block;
     font-size: 1.5em;
-    font-family: Verdana, Arial, sans-serif;
-    font-weight: bold;
+    font-family: "Sekuya", Arial, sans-serif;
+    border-top: 1px solid #C8A563;
+}
+
+nav li:first-child {
+    border-top: none;
 }
 
 nav li a {
     display: block;
     color: #000;
-    text-align: left;
     padding: 0.5em 1em;
     text-decoration: none;
 }
@@ -115,6 +117,242 @@ nav li a:visited {
 
 nav li a:hover {
     color: #9900ff;
+}
+
+/* Style rules for mobile viewports */
+
+header {
+    z-index: 1000;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    height: 150px;
+    border-bottom: solid 2px #C8A563;
+}
+
+header img {
+    margin: 0 auto;
+}
+
+header a img {
+    padding: 0.3em;
+    display: block;
+    max-width: 100%;
+    height: 100%;
+}
+
+/* Show mobile class, hide tablet-desktop class for mobile viewports */
+
+.mobile {
+    display: block;
+}
+
+.tablet-desktop {
+    display: none;
+}
+
+/* Mobile viewport styles */
+
+.mobile p {
+    font-size: 0.8em;
+}
+
+/* Mobile grid */
+
+.grid-mobile {
+    display: grid;
+    grid-column: 1 / span 3;
+}
+
+/* Mobile link styles */
+.mobile-link {
+    display: block;
+    padding: 2%;
+    margin: 0.4em auto;
+    width: 80%;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 2px solid #C8A563;
+}
+
+.mobile-link a {
+    text-decoration: none;
+    font-size: 1.5em;
+    display: block;
+}
+
+/* General mobile content style */
+
+.mobile-container {
+    background-color: #fff;
+    border-top: solid 2px #C8A563;
+    border-bottom: solid 2px #C8A563;
+    margin-bottom: 1em;
+    padding: 4%;
+}
+
+/* Mobile content styles for index.html */
+
+#mobile-intro p, #mobile-index-content p {
+    font-size: 1em;
+    text-align: left;
+    padding: 1em;
+}
+
+#mobile-intro h2, #mobile-index-content h2 {
+    font-size: 1.5em;
+    text-align: center;
+    padding: 0.5em;
+}
+
+#mobile-index-content dl {
+    margin: 1em 0;
+}
+
+#mobile-index-content dt {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 1em;
+}
+
+#mobile-index-content dt:before {
+    content: "• ";
+    color: #9900ff;
+}
+
+#mobile-index-content dd {
+    margin-left: 1.4em;
+    margin-bottom: 1em;
+    font-size: 1em;
+}
+
+#mobile-guild-details {
+    overflow: auto;
+}
+
+#mobile-guild-details h3 {
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.guild-stats-mobile {
+    width: 100%;
+}
+
+#guild-stats-mobile:last-of-type {
+    margin-bottom: 0;
+}
+
+.guild-stats-mobile img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Mobile content styles for about.html */
+
+#about-content-mobile p {
+    font-size: 1em;
+    text-align: left;
+    padding: 1em;
+}
+
+#about-content-mobile p:last-child {
+    padding-bottom: 0;
+}
+
+/* Mobile styles for guild-news.html */
+
+.first-item {
+    position: relative;
+    left: -1.4em;
+    list-style-type: none;
+    margin-left: 0;
+}
+
+#mobile-schedule ul {
+    border-bottom: 2px solid #C8A563;
+    padding: 1em 0.5em;
+}
+
+#mobile-schedule ul:first-of-type {
+    border-top: 2px solid #C8A563;
+    margin-top: 1em;
+}
+
+#mobile-schedule ul:last-of-type {
+    margin-bottom: 1em;
+}
+
+#mobile-schedule ul li {
+    margin-left: 1em;
+}
+
+/* Mobile content styles for contact.html */
+
+#contact-mobile h3:first-child {
+    margin-top: 1em;
+}
+
+#contact-mobile p {
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+#contact-mobile h3 {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+/* Mobile styles for recruit-page.html */
+
+#recruit-content-mobile p:last-of-type {
+    text-align: center;
+}
+
+.main-requirements-mobile, .priority-characters-mobile {
+    width: 100%;
+    text-align: left;
+}
+
+.main-requirements-mobile ul {
+    list-style-type: disc;
+    padding-left: 2em;
+    font-size: 0.8em;
+    margin: 1em 0;
+}
+
+.main-requirements-mobile ul li {
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+.main-requirements-mobile ul li:last-child {
+    margin-bottom: 0;
+}
+
+#guild-rules-mobile ol {
+    padding: 0 0.8em;
+}
+
+#guild-rules-mobile ol li {
+    list-style-type: none;
+    font-size: 0.8em;
+    padding-bottom: 0.8em;
+}
+
+#guild-rules-mobile ol li:last-child {
+    padding-bottom: 0;
+}
+
+#recruit-content-mobile p:last-of-type {
+    border-top: 2px solid #C8A563;
 }
 
 /* CSS styles for footer */
@@ -138,51 +376,94 @@ footer p a {
 
 .highlight {
     color: #9900ff;
-    text-decoration: none;
+}
+
+.bold {
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 .small-text {
-    font-size: 0.75em;
+    font-size: 0.8em;
+}
+
+/* Generic container/border-style for tablet-desktop */
+
+.generic-container {
+    background-color: #fff;
+    border-top: solid 2px #C8A563;
+    border-bottom: solid 2px #C8A563;
+    padding: 2%;
+    margin-bottom: 1em;
+}
+
+.generic-container:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Grid Styles */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 2%;
+    row-gap: 0;
+}
+
+.grid-item4 {
+    grid-column: 1 / span 3;
 }
 
 /* Code below is for index.html */
 
-#intro {
-    background-color: #fff;
-    border-top: solid 2px #C8A563;
-    border-bottom: solid 2px #C8A563;
-    margin-bottom: 1em;
-    padding: 1%;
+#intro p {
+    font-size: 1em;
+    text-align: left;
+    padding: 1em;
 }
 
-.index-content {
-    background-color: #fff;
-    border-top: solid 2px #C8A563;
-    border-bottom: solid 2px #C8A563;
-    padding: 1%;
-}
-
-.index-content dt {
+#index-content dt {
     font-weight: bold;
     font-size: 1.2em;
     margin-top: 1em;
 }
 
-.index-content dd {
+#index-content dd {
     margin-left: 1.4em;
     margin-bottom: 1em;
     font-size: 0.8em;
 }
 
-.index-content dd::before {
-    content: "- ";
-}
-
-.index-content dt::before {
+#index-content dt::before {
     content: "• ";
     color: #9900ff;
 }
 
+#guild-details {
+    overflow: auto;
+}
+
+#guild-details h3 {
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.guild-stats {
+    float: left;
+    width: 25%;
+    margin-right: 3%;
+}
+
+#guild-details:last-of-type {
+    margin-bottom: 0;
+}
+
+.guild-stats img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    display: block;
+}
 
 /* Code below is for about.html */
 
@@ -193,28 +474,42 @@ footer p a {
     margin: 0 auto;
 }
 
-#seraphims img, #ophanims img {
+#seraphims-mobile, #ophanims-mobile {
+    text-align: center;
+    clear: both;
+    overflow: auto;
+    margin: 0 auto;
+}
+
+.single-character img {
     width: 40%;
     aspect-ratio: 1 / 1;
     object-fit: scale-down;
 }
 
+#seraphims-mobile img, #ophanims-mobile img {
+    width: 90%;
+    aspect-ratio: 1 / 1;
+    object-fit: scale-down;
+}
+
 .single-character {
-    align-items: center;
+    text-align: center;
     background-color: #F9FAFD;
-    float: left;
-    margin: 2% 2%;
+    margin: 1.2em auto;
     border: solid 2px #C8A563;
     width: 46%;
     min-width: 280px;
 }
 
 .single-character p {
+    display: block;
     font-size: 1em;
     padding: 1em;
 }
 
 .single-character h2 {
+    display: block;
     font-size: 1.5em;
     text-align: center;
     padding: 0.5em;
@@ -229,9 +524,10 @@ footer p a {
     padding: 1em;
 }
 
-.about-content {
+#about-content {
+    clear: both;
+    display: block;
     background-color: #fff;
-    content: border-box;
     margin: 0 2%;
     padding: 2%;
     text-align: left;
@@ -239,12 +535,12 @@ footer p a {
     border-bottom: solid 2px #C8A563;
 }
 
-.about-content p {
+#about-content p {
     font-size: 1em;
     padding: 1em;
 }
 
-.about-content a {
+#about-content a {
     text-decoration: none;
 }
 
@@ -252,34 +548,40 @@ footer p a {
 
 #contact {
     text-align: center;
-    background-color: #fff;
-    border-top: solid 2px #C8A563;
-    border-bottom: solid 2px #C8A563;
-    padding: 1%;
 }
 
-#contact a {
-    color: #9900ff;
+#contact a:visited {
+    color: #fff;
+}
+
+.contact-link  {
+    display: block;
+    background-color: #9900ff;
+    color: #fff;
     text-decoration: none;
+    font-size: 1.25em;
+    width: 40%;
+    margin: 1% auto;
+    padding: 0.5em;
+    border-radius: 25px;
 }
 
 #contact p {
     font-size: 1em;
-    margin-bottom: 1em;
-    text-align: left;
+    text-align: center;
+    padding: 0 1em 0 0.6em;
 }
 
 .map {
     width: 100%;
-    border: solid 4px #3FAAB7;
+    margin-top: 1em;
+    border: solid 4px #C8A563;
 }
 
-
-/* Code below is for guild-news.html */
+/* Desktop Viewport: Code below is for guild-news.html */
 
 #guild-news-intro {
-    padding: 1em;
-    overflow: auto;
+    margin: 1em 0;
 }
 
 #guild-news-intro p {
@@ -290,10 +592,9 @@ footer p a {
 .news-section {
     width: 98%;
     padding: 1em;
-    overflow: auto;
     background-color: #fff;
     border: solid 2px #C8A563;
-    margin: 1em 0;
+    margin: 1em auto;
 }
 
 .news-section h3:hover {
@@ -301,20 +602,189 @@ footer p a {
 }
 
 .news-date {
-    color: gray;
+    color: #c7c7c7;
     font-size: 0.75em;
     text-align: left;
 }
 
+/* Table Styles */
 
-/* Code below is for recruit-form.html */
+#important-news h2 {
+    text-align: center;
+    border-bottom: 4px solid #C8A563;
+    color: #9900ff;
+}
+
+#important-news table {
+    height: 100%;
+    width: 90%;
+    margin: 1em auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+#important-news table caption {
+    width: 100%;
+    font-family: "Sekuya", serif;
+    font-size: 1.4em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    border-top: 2px solid #C8A563;
+    background: linear-gradient(180deg,#9900ff 0%, #ffffff 50%, #9900ff 80%, #5a3895 100%);
+}
+
+#important-news table tr:first-of-type th {
+    padding: 1em;
+    font-size: 1.2em;
+    background-color: #5a3895;
+    color: #fff;
+}
+
+#important-news table tr td {
+    padding: 0.5em;
+}
+
+#important-news table, #important-news th, #important-news tr, #important-news td {
+    border: 2px solid #000;
+}
+
+#important-news table tr td:first-child {
+    text-align: left;
+}
+
+#important-news .stripe {
+    color: #000;
+    background-color: #e0b3ff;
+}
+
+/* Images for td */
+
+.rigomor, .pruinaum, .atma-ram, .pruinaum-outskirt {
+    background-size: cover;
+    background-position: center;
+    color: #000;
+}
+
+.rigomor {
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9)), 
+                url('img/titans-grotto.png');
+}
+
+.pruinaum {
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9)), 
+                url('img/altar-of-invocation.png');
+}
+
+.atma-ram {
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9)), 
+                url('img/spirit-lords-temple.png');
+}
+
+.pruinaum-outskirt {
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9)), 
+                url('img/plegass-labyrinth.png');
+}
+
+/* Forms style */
+
+#schedule-form {
+    font-family: inherit;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+/* Fieldset related */
+
+fieldset {
+    margin-top: 1em;
+    border: 1px solid #C8A563;
+}
+
+fieldset > legend {
+    font-family: "Sekuya", sans-serif;
+    font-size: 1.2em;
+}
+
+/* label related */
+
+label {
+    display: block;
+    margin: 1em 0;
+    font-size: 1em;
+}
+
+#character-label, #schedule-form fieldset > p {
+    margin-bottom: 0.2em;
+}
+
+/* input related */
+
+input {
+    display: block;
+    font-size: 0.8em;
+    margin-top: 0.5em;
+}
+
+input[type="text"] {
+    width: 60%;
+}
+
+select {
+    width: auto;
+    height: 100%;
+    font-size: 0.6em;
+}
+
+.radioboxes {
+    margin: 0 0 0.5em 1em;
+}
+
+.radioboxes > input {
+    display: inline-block;
+    margin-top: 0;
+    height: auto;
+    width: auto;
+}
+
+#schedule-form textarea {
+    font-family: inherit;
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.4em;
+    font-size: 1em;
+    border: 2px solid #C8A563;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+/* submit */
+
+input[type="submit"] {
+    display: block;
+    grid-column: 1 / -1;
+    font-family: inherit;
+    width: 220px;
+    padding: 0.5em;
+    border: 0;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #9900ff;
+    justify-self: center;
+}
+
+/* Desktop Viewport Styles for recruit-page.html */
 
 #recruit-content {
-    background-color: #fff;
-    width: 100%;
+    padding: 0 2%;
+    margin-bottom: 0;
+}
+
+#recruit-content article {
     padding: 1em;
-    border-top: solid 2px #C8A563;
-    border-bottom: solid 2px #C8A563;
+}
+
+#recruit-content article li {
+    font-size: 1.1em;
 }
 
 #recruit-content ul {
@@ -323,20 +793,309 @@ footer p a {
     padding-left: 2em;
 }
 
-#recruit-content p {
-    clear: both;
-}
-
 .main-requirements {
-    float: left;
     font-size: 1em;
-    padding: 1em;
 }
 
-.priority-characters {
-    float: left;
-    font-size: 1em;
-    padding: 1em;
-    clear: right;
+#recruit-content article:nth-of-type(2) {
+    background-color: #e6e6e6;
 }
+
+#recruitment-form {
+    margin: 2%;
+    border-top: 2px solid #C8A563;
+}
+
+#recruitment-form {
+    margin-top: 0;
+}
+
+#recruitment-form p {
+    text-align: center;
+}
+
+/* ================================================================= */
+/* MEDIA QUERY FOR TABLET VIEWPORT */
+/* Tablet Viewport: Show tablet-desktop class, hide mobile class */
+@media screen and (min-width: 630px), print {
+    .tablet-desktop {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+
+/* Tablet Viewport: Style rule for header */
+    header {
+        position: static;
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+
+/* Tablet Viewport: Style rules for nav area */
+
+    nav li {
+        border-top: none;
+        display: inline-block;
+        border-right: 1px solid #C8A563;    
+    }
+
+    nav li:last-child {
+        border-right: none;
+    }
+
+    nav li a {
+        padding: 0.1em 0.75em;
+    }
+
+/* Tablet Viewport: Style rules for main content area */
+
+    main ul {   /* webpage does not use ul for mine */
+        margin: 0 0 4% 10%;
+    }
+
+    .grid {
+        display: grid !important;
+    }
+
+    
+    /*
+
+    #exercises {
+        clear: left;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+        background-color: #f2f2f2;
+        padding: 1% 2%;
+    }
+
+    Kept code for reference but not used in this project. Similar border style are already present throughout the project.
+
+    #exercises dt {
+        font-weight: bold;
+    }
+
+    #exercises dd {
+        padding: 0.5% 1% 2% 0;
+    }
+
+    already implemented.
+    */
+
+    #intro {
+        background: linear-gradient(to right, #e0b3ff, #fff);
+    }
+
+    .contact-link {
+        font-size: 1em;
+    }
+
+    .map {
+        width: 600px;
+        height: 450px;
+    }
+
+/* Tablet Viewport: For index.html */
+
+    .frame {
+        max-width: 350px;
+    }
+
+/* Tablet Viewport: For index.html, specifically guild-details */
+
+    .guild-stats {
+        float: none;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+/* Tablet Viewport: For about.html */
+
+    .single-character p {
+        font-size: 0.8em;
+    }
+
+    .single-character img {
+        width: 60%;
+    }
+
+/* Tablet Viewport: For guild-news.html */
+
+    #schedule-form {
+        display: grid;
+        grid-template-columns: auto;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+
+
+/* Tablet Viewport: For recruit-page.html */
+
+    #recruit-content article {
+        padding: 0.5em;
+    }
+    #recruit-content article li {
+        font-size: 0.8em;
+    }
+
+    #recruit-content article ul {
+        padding-left: 1em;
+    }
+
+    #guild-rules ol {
+        list-style-type: none;
+        padding-left: 1em;
+    }
+
+    #guild-rules ol li {
+        font-size: 0.6em;
+    }
+
+    #recruitment-form p {
+        font-size: 0.8em;
+    }
+}
+
+/* ================================================================= */
+/* MEDIA QUERY FOR DESKTOP VIEWPORT */
+@media screen and (min-width: 1015px) {
+
+/* Desktop Viewport: Style rule for header */
+
+    .header-container {
+        display: grid;
+        grid-template-columns: 25% 70%;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 5%;
+    }
+    
+    header {
+        width: 100%;
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+
+    header a img {
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        padding: 1%;
+        object-fit: contain;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-content: center;
+        width: 100%;
+    }
+
+    nav ul li {
+        padding: 0;
+        width: 100%;
+        border: none;
+    }
+
+    nav ul li a {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        place-items: center;
+        padding: 0.5em 0.5em;
+        font-size: 1em;
+    }
+
+    nav li a:hover {
+        color: #fff;
+        background-color: #9900ff;
+    }
+
+/* Desktop Viewport: Style rules for main content */
+    main {
+        clear: left;
+    }
+
+    main h1 {
+        font-size: 1.8em;
+    }
+
+    .map {
+        width: 90%;
+        margin-top: 1em;
+        border: solid 4px #C8A563;
+    }
+
+/* Desktop Viewport: Style rules for index.html */
+
+    .guild-stats {
+        float: left;
+        width: 30%;
+        margin-right: 3%;
+    }
+
+    .frame {
+        max-width: 450px;
+    }
+
+/* Desktop Viewport: Style rules for guild-news.html */
+
+    #schedule-form {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        width: auto;
+    }
+
+/* Desktop Viewport: Style rules for about.html */
+
+    .single-character {
+        float: left;
+        margin: 2% 2%;
+    }
+
+    .single-character p {
+        font-size: 1.2em;
+    }
+
+
+/* Desktop Viewport: Style rules for recruit-page.html */
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    #recruit-content {
+        font-size: 1.2em;
+    }
+
+}
+/* ================================================================= */
+/* MEDIA QUERY FOR LARGE DESKTOP VIEWPORT */
+@media screen and (mid-width: 1921px) {
+    #container {
+        width: 1920px;
+        margin: 0 auto;
+    }
+
+    table {
+        width: 80%;
+    }
+}
+
+/* MEDIA QUERY FOR PRINT */
+@media print {
+    body {
+        background-color: #fff;
+        color: #000;
+    }
+}
+
 
