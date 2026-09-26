@@ -1,8 +1,8 @@
 /*
     CSS For Seraphim Guild Website
     Author: Ned Basilio
-    Activity: PRLM Chapter 7
-    Date: 08-08-2026 mm-dd-yyyy
+    Activity: PRLM Chapter 9
+    Date: 09-26-2026 mm-dd-yyyy
 
 */
 
@@ -11,7 +11,7 @@
 }
 
 /* Reset Styles */
-body, header, nav, main, footer, h1, h2, h3, div, img, p, ul, li, figure, figcaption, section, article, aside {
+body, header, nav, main, footer, h1, h2, h3, div, img, p, ul, li, figure, figcaption, section, article, aside, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -30,6 +30,16 @@ a {
 a:visited {
     color: #9900ff;
 }
+
+/* for video */
+
+video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 2% auto;
+}
+    
 
 .frame {
     position: relative;
@@ -292,6 +302,19 @@ header a img {
     margin-left: 1em;
 }
 
+#chill-theme {
+    margin: 2% 0;
+}
+
+#chill-theme > p {
+    margin-bottom: 1%;
+    font-size: 1rem;
+}
+
+#chill-theme > audio {
+    margin: 2% 0;
+}
+
 /* Mobile content styles for contact.html */
 
 #contact-mobile h3:first-child {
@@ -526,9 +549,7 @@ footer p a {
 
 #about-content {
     clear: both;
-    display: block;
     background-color: #fff;
-    margin: 0 2%;
     padding: 2%;
     text-align: left;
     border-top: solid 2px #C8A563;
@@ -544,6 +565,9 @@ footer p a {
     text-decoration: none;
 }
 
+#promotional-video {
+    text-align: center;
+}
 /* Code below is for contact.html */
 
 #contact {
@@ -930,7 +954,14 @@ input[type="submit"] {
         margin: 0 auto;
     }
 
+    #chill-theme > p {
+        margin-bottom: 2%;
+        font-size: 1rem;
+    }
 
+    #chill-theme > audio {
+        margin: 0;
+    }
 
 /* Tablet Viewport: For recruit-page.html */
 
@@ -1079,7 +1110,7 @@ input[type="submit"] {
 }
 /* ================================================================= */
 /* MEDIA QUERY FOR LARGE DESKTOP VIEWPORT */
-@media screen and (mid-width: 1921px) {
+@media screen and (min-width: 1921px) {
     #container {
         width: 1920px;
         margin: 0 auto;
